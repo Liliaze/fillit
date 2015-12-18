@@ -6,7 +6,7 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/13 14:48:11 by dboudy            #+#    #+#             */
-/*   Updated: 2015/12/16 15:49:59 by dboudy           ###   ########.fr       */
+/*   Updated: 2015/12/18 12:06:53 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,37 @@ t_tetri	**ft_read_file(char *file_to_open, t_tetri **first)
 	char	*tmp;
 	char	*pattern;
 
+	printf("Reading file...\n");
+
 	fd = open(file_to_open, O_RDONLY);
+	printf("Opened file %s successfully.\n\n", file_to_open);
+
 	tmp = (char *)malloc(sizeof(char) * 21);
 	pattern = (char *)malloc(sizeof(char) * 16);
 	ret = 1;
-	printf("open = OK");
 	while (ret > 0)
 	{
-	printf("read boucle = OK\n");
 		ret = read(fd, tmp, 21);
-		tmp[20] = '\0';
-		ft_strnout(pattern, tmp);
-	printf("strnout = OK\n");
-		if (is_pattern_valid(pattern) == 0)
-			return (NULL);
-		push_tetrimino_back(first, pattern);
-	printf("push tetri = OK\n");
+		if (ret > 0)
+		{
+			printf("ret is %d\n", ret);
+			tmp[20] = '\0';
+			printf("Reading :\n%s\n", tmp);
+			if (check_symbols(tmp) == 0)
+			{
+				printf("%s is treated as invalid.\n\n", pattern);
+				return (NULL);
+			}
+			ft_strnout(pattern, tmp);
+			printf("Treated as :\n%s\n\n", pattern);
+			printf("%s is valid !\n\n", pattern);
+			printf("Moving the piece in the left corner... ");
+			pattern = pattern_to_left_corner(pattern);
+			printf(" done.\n");
+			push_tetrimino_back(first, pattern);
+		}
 	}
-	printf("read end = OK");
+
 	free(tmp);
 	free(pattern);
 	close(fd);

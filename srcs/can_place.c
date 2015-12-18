@@ -6,9 +6,12 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 07:51:25 by mperronc          #+#    #+#             */
-/*   Updated: 2015/12/15 10:33:24 by dboudy           ###   ########.fr       */
+/*   Updated: 2015/12/16 20:31:47 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../incl/fillit.h"
+#include "../libft/libft.h"
 
 int		can_place(char piece[4][4], char **board, int x, int y)
 {

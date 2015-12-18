@@ -6,7 +6,7 @@
 #    By: mperronc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/02 12:07:00 by mperronc          #+#    #+#              #
-#    Updated: 2015/12/16 14:43:12 by mperronc         ###   ########.fr        #
+#    Updated: 2015/12/18 12:09:55 by dboudy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,19 +16,11 @@ SRC_PATH = ./srcs/
 
 SRC_NAME = pattern_to_left_corner.c \
 		   get_offset.c \
-		   is_pattern_valid.c \
-		   is_pattern_valid_dotsharp.c \
-		   is_pattern_valid_i.c \
-		   is_pattern_valid_l.c \
-		   is_pattern_valid_j.c \
-		   is_pattern_valid_s.c \
-		   is_pattern_valid_z.c \
-		   is_pattern_valid_t.c \
-		   is_pattern_valid_o.c \
 		   can_place.c \
 		   put_tetri.c \
 		   solve_me.c \
 		   ft_read_file.c \
+		   check_validity.c \
 		   new_tetrimino.c \
 		   push_tetrimino_back.c \
 		   turn_into_alphachar.c \

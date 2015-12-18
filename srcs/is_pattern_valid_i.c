@@ -6,10 +6,9 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/16 14:34:11 by mperronc          #+#    #+#             */
-/*   Updated: 2015/12/16 14:53:25 by mperronc         ###   ########.fr       */
+/*   Updated: 2015/12/17 16:49:27 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../incl/fillit.h"
 #include "../libft/libft.h"
@@ -52,9 +51,9 @@ static	int	fcase2(char *pattern, int offset)
 			return (0);
 		i++;
 	}
-	if (ft_strncmp(pattern + offset, "#...#...#....#", 13) != 0)
+	if (ft_strncmp(pattern + offset, "#...#...#...#", 13) != 0)
 		return (0);
-	i = offset + 3;
+	i = offset + 13;
 	while (i < 16)
 	{
 		if (pattern[i] != '.')

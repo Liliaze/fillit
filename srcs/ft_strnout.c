@@ -6,9 +6,12 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 16:37:27 by dboudy            #+#    #+#             */
-/*   Updated: 2015/12/14 16:38:32 by dboudy           ###   ########.fr       */
+/*   Updated: 2015/12/16 20:31:53 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../incl/fillit.h"
+#include "../libft/libft.h"
 
 void	ft_strnout(char *dest, char *src)
 {
