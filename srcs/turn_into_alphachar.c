@@ -6,7 +6,7 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 02:41:12 by mperronc          #+#    #+#             */
-/*   Updated: 2015/12/17 13:43:20 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/01/06 19:15:08 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	turn_into_alphachar(char (*pattern)[4][4], int pos)
 {
 	int i;
 	int j;
-
-	printf("Converting the # into %c\n", 'A'+pos);
 
 	i = 0;
 	while (i < 4)
@@ -32,20 +30,4 @@ void	turn_into_alphachar(char (*pattern)[4][4], int pos)
 		}
 		i++;
 	}
-
-	int x = 0;
-	int y = 0;
-	while (x < 4)
-	{
-		y = 0;
-		while (y < 4)
-		{
-			printf("%c ", (*pattern)[x][y]);
-			y++;
-		}
-		printf("\n");
-		x++;
-	}
-
-	printf("\n");
 }

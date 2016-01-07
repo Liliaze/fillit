@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_offset.c                                       :+:      :+:    :+:   */
+/*   erase_piece.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/14 01:09:50 by mperronc          #+#    #+#             */
-/*   Updated: 2015/12/16 14:48:13 by mperronc         ###   ########.fr       */
+/*   Created: 2015/12/19 14:17:33 by mperronc          #+#    #+#             */
+/*   Updated: 2016/01/06 19:14:09 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/fillit.h"
 #include "../libft/libft.h"
 
-int		get_offset(char *pattern)
+void	erase_piece(char **board, int board_size, int pos)
 {
-	int	i;
+	int		i;
+	int		j;
+	char	c;
 
+	c = 'A' + pos;
 	i = 0;
-	while (pattern[i] == '.')
+	while (i < board_size + 4)
+	{
+		j = 0;
+		while (j < board_size + 4)
+		{
+			if (board[i][j] == c)
+				board[i][j] = '.';
+			j++;
+		}
 		i++;
-	return (i);
+	}
 }

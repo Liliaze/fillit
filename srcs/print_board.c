@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   can_place.c                                        :+:      :+:    :+:   */
+/*   print_board.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/15 07:51:25 by mperronc          #+#    #+#             */
-/*   Updated: 2016/01/06 19:14:03 by mperronc         ###   ########.fr       */
+/*   Created: 2015/12/19 14:01:57 by mperronc          #+#    #+#             */
+/*   Updated: 2016/01/06 19:14:53 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/fillit.h"
 #include "../libft/libft.h"
+#include "../incl/fillit.h"
 
-int		can_place(char piece[4][4], t_board *board, int y, int x)
+void	print_board(char **board, int board_size)
 {
 	int i;
 	int j;
 
 	i = 0;
-	while (i < 4)
+	while (i < board_size)
 	{
 		j = 0;
-		while (j < 4)
+		while (j < board_size)
 		{
-			if (piece[i][j] != '.')
-			{
-				if (board->grid[i + y][x + j] != '.' ||
-					i + y >= board->size ||
-					x + j >= board->size)
-					return (0);
-			}
+			ft_putchar(board[i][j]);
 			j++;
 		}
+		ft_putchar('\n');
 		i++;
 	}
-	return (1);
 }

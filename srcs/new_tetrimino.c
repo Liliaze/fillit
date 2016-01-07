@@ -6,7 +6,7 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 01:20:29 by mperronc          #+#    #+#             */
-/*   Updated: 2015/12/17 13:59:06 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/01/06 19:14:44 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,11 @@ t_tetri		*new_tetrimino(char *pattern, int pos)
 	int			i;
 	int			j;
 
-	printf("Allocating the piece...\n");
-
 	new_tetri = (t_tetri *)malloc(sizeof(t_tetri));
 	if (new_tetri == NULL)
 	{
 		return (NULL);
 	}
-
 	i = 0;
 	while (i < 4)
 	{
@@ -41,6 +38,5 @@ t_tetri		*new_tetrimino(char *pattern, int pos)
 	new_tetri->pos = pos;
 	new_tetri->next = NULL;
 	turn_into_alphachar(&(new_tetri->pattern), pos);
-
 	return (new_tetri);
 }

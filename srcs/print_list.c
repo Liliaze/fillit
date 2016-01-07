@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   print_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/09 18:11:42 by mperronc          #+#    #+#             */
-/*   Updated: 2015/12/16 14:48:13 by mperronc         ###   ########.fr       */
+/*   Created: 2016/01/06 17:21:03 by mperronc          #+#    #+#             */
+/*   Updated: 2016/01/06 19:14:57 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
 #include "../incl/fillit.h"
+#include "../libft/libft.h"
 
-int		get_next_line(int const fd, char **line)
+void	print_list(t_tetri *first)
 {
-	char			*buf;
-	int				i;
-	int				r;
-	char			c;
+	int i;
+	int j;
 
-	buf = (char *)malloc(sizeof(char) * BUFF_SIZE);
-	i = 0;
-	c = 0;
-	r = 1;
-	while (c != 10 && r > 0)
+	while (first)
 	{
-		r = read(fd, &c, 1);
-		if (c != 10)
+		i = 0;
+		ft_putstr("Piece no. ");
+		ft_putnbr(first->pos);
+		ft_putchar('\n');
+		while (i < 4)
 		{
-			buf[i] = c;
+			j = 0;
+			while (j < 4)
+			{
+				ft_putchar(first->pattern[i][j]);
+				j++;
+			}
+			ft_putchar('\n');
 			i++;
 		}
+		ft_putchar('\n');
+		first = first->next;
 	}
-	buf[i] = 0;
-	*line = ft_strdup(buf);
-	free(buf);
-	return (r);
 }

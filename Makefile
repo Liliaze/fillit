@@ -6,7 +6,7 @@
 #    By: mperronc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/02 12:07:00 by mperronc          #+#    #+#              #
-#    Updated: 2015/12/18 12:09:55 by dboudy           ###   ########.fr        #
+#    Updated: 2016/01/06 17:46:51 by mperronc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,23 +14,25 @@
 
 SRC_PATH = ./srcs/
 
-SRC_NAME = pattern_to_left_corner.c \
-		   get_offset.c \
-		   can_place.c \
-		   put_tetri.c \
-		   solve_me.c \
-		   ft_read_file.c \
+SRC_NAME = can_place.c \
 		   check_validity.c \
-		   new_tetrimino.c \
-		   push_tetrimino_back.c \
-		   turn_into_alphachar.c \
+		   erase_piece.c \
 		   extend_board.c \
+		   fillit.c \
+		   ft_read_file.c \
 		   ft_strnew_with_dot.c \
 		   ft_strnout.c \
 		   get_board_size.c \
-		   get_next_line.c \
 		   list_len.c \
-		   fillit.c \
+		   new_tetrimino.c \
+		   pattern_to_left_corner.c \
+		   print_board.c \
+		   push_tetrimino_back.c \
+		   put_tetri.c \
+		   solve_me.c \
+		   turn_into_alphachar.c \
+		   free_board.c \
+		   print_list.c
 
 OBJ_PATH = ./obj/
 

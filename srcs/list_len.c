@@ -6,7 +6,7 @@
 /*   By: mperronc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 07:57:23 by mperronc          #+#    #+#             */
-/*   Updated: 2015/12/17 14:00:15 by mperronc         ###   ########.fr       */
+/*   Updated: 2016/01/06 19:14:41 by mperronc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		list_len(t_tetri *first)
 {
 	int		i;
 	t_tetri	*tmp;
-	
+
 	i = 0;
 	tmp = first;
 	while (tmp)
