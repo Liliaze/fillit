@@ -35,7 +35,7 @@ dépot.
 • Si vous voulez ajouter un fichier externe à votre programme (autrement dit : qui ne
 sera pas compilé), il devra impérativement s’appeler extern_file.txt, et devra
 se trouver à la racine de votre dépôt.
-5
+
 Chapitre V
 Partie obligatoire
 V.1 L’entrée du programme
@@ -62,7 +62,7 @@ Quelques exemples de descriptions de Tetriminos invalides :
 ...# ..#. ##... ## .... .... #### #### HH..
 .... .#.. .... #. .... .... #### ,,,, ....
 .... #... .... .... ##.. #### ,,,, ....
-6
+
 Fillit Can you feel it ?
 Chaque Tetriminos n’occupant que 4 cases des 16 cases disponibles il est donc possible
 de decrire le même Tetriminos de plusieurs façons différentes. Toutefois, la rotation
@@ -87,23 +87,22 @@ $> cat -e valid_sample.fillit
 ...#$
 ...#$
 ...#$
-$
+
 ....$
 ....$
 ....$
 ####$
-$
+
 .###$
 ...#$
 ....$
 ....$
-$
+
 ....$
 ..##$
 .##.$
 ....$
-$>
-7
+
 Fillit Can you feel it ?
 Ainsi qu’un exemple de fichier de description invalide que votre programme doit rejeter
 pour plusieurs raisons :
@@ -129,7 +128,7 @@ $
 ....$
 $
 $>
-8
+
 Fillit Can you feel it ?
 V.2 Le plus petit carré
 Le but de ce projet est d’agencer les Tetriminos entre eux pour former le plus petit
@@ -167,7 +166,7 @@ m) n) o) p) q) r)
 ...1 ...1 22.1 .221 22.1 .221
 ...1 ...1 ...1 ...1 22.1 .221
 D’après les règles du jeu, la bonne solution est donc a).
-9
+
 Fillit Can you feel it ?
 V.3 La sortie du programme
 Votre programme doit afficher le plus petit carré solution sur la sortie standard. Pour
@@ -218,7 +217,7 @@ $
 $> ./fillit sample.fillit | cat -e
 error$
 $>
-10
+
 Fillit Can you feel it ?
 Dernier Exemple :
 $> cat sample.fillit | cat -e
